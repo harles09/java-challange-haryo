@@ -9,7 +9,7 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity(name = "User")
+@Entity(name = "table_user")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,14 +19,13 @@ public class User {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     @Column(length = 25, unique = true)
-    @NotNull
     private String username;
-    @NotNull
     @Column(length = 25)
     private String password;
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "user_roles",
-            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+            joinColumns = @JoinColumn(name = "table_user", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "table_roles", referencedColumnName = "id"))
     private Set<Role> roles;
+
 }

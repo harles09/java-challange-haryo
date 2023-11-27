@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "4400c0d7-1abe-4cd7-abba-b669afc13e0e",
+		"name": "Ist Challange Api Docs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1122461"
+	},
+	"item": [
+		{
+			"name": "Logout User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "This API endpoint is used to log out a user. It sends an HTTP POST request to the URL `http://localhost:8080/api/logout`.\n\n### Request Parameters\n\nThis endpoint does not require any request parameters.\n\n### Response\n\nThe last execution of this request returned a response with a status code of 200, indicating a successful logout. The response body included the message \"User logout successfully!\".\n\nPlease note that this is a custom instruction from the user to add documentation. The response message may vary depending on the implementation of the API."
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"haryox\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "\nThis API endpoint allows users to perform a login operation by sending an HTTP POST request to the specified URL: `http://localhost:8080/api/login`.\n\n### Request\nThe request should include the necessary parameters in the request body. Please refer to the API documentation or contact the API provider for the required request parameters.\n\n### Response\nUpon successful execution of the login operation, the API will return a response with a status code of 200. The response body will contain the message \"Sukses Login\", indicating that the login was successful.\n\nPlease note that the response may also include additional information or data, depending on the API implementation. It is recommended to refer to the API documentation or contact the API provider for more details on the response structure and possible additional data.\n\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"haryaaaa\",\r\n     \"password\":\"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"4"
+					]
+				},
+				"description": "This API endpoint allows you to update a user with the provided user ID. The HTTP PUT request should be made to the URL `http://localhost:8080/api/user/4`, where `4` is the ID of the user to be updated.\n\n### Request Parameters\n\nThis API endpoint does not require any request parameters.\n\n### Response\n\nThe API will return a response with the following details:\n\n- Status: 201\n- Body: \"User Berhasil Diubah\"\n    \n\nPlease note that the response body may vary based on the changes made to the user."
+			},
+			"response": []
+		},
+		{
+			"name": "Get All User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaDapil\":\"Testing\",\r\n    \"provinsi\":\"Testing\",\r\n    \"wilayahDapilList\": [\"Testing1\", \"Testing2\"],\r\n    \"jumlahKursi\":12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
