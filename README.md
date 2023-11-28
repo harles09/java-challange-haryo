@@ -1,4 +1,4 @@
-# Project Title
+# Java Challange ist
 This API is designed to evaluate the coding skills of candidates for work positions. 
 It allows the creation of coding tests, the submission of solutions, and the assessment 
 of the results. The API is intended for professional use only and should not be used 
