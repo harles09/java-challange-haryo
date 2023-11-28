@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "4400c0d7-1abe-4cd7-abba-b669afc13e0e",
+		"_postman_id": "72ba166e-be0c-44b5-9378-beb0e822fd46",
 		"name": "Ist Challange Api Docs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "1122461"
@@ -9,8 +9,24 @@
 		{
 			"name": "Logout User",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"logout"
+					]
+				},
 				"description": "This API endpoint is used to log out a user. It sends an HTTP POST request to the URL `http://localhost:8080/api/logout`.\n\n### Request Parameters\n\nThis endpoint does not require any request parameters.\n\n### Response\n\nThe last execution of this request returned a response with a status code of 200, indicating a successful logout. The response body included the message \"User logout successfully!\".\n\nPlease note that this is a custom instruction from the user to add documentation. The response message may vary depending on the implementation of the API."
 			},
 			"response": []
@@ -63,7 +79,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/user/4",
+					"raw": "http://localhost:8080/api/user/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -72,10 +88,10 @@
 					"path": [
 						"api",
 						"user",
-						"4"
+						"2"
 					]
 				},
-				"description": "This API endpoint allows you to update a user with the provided user ID. The HTTP PUT request should be made to the URL `http://localhost:8080/api/user/4`, where `4` is the ID of the user to be updated.\n\n### Request Parameters\n\nThis API endpoint does not require any request parameters.\n\n### Response\n\nThe API will return a response with the following details:\n\n- Status: 201\n- Body: \"User Berhasil Diubah\"\n    \n\nPlease note that the response body may vary based on the changes made to the user."
+				"description": "This API endpoint allows you to update a user with the provided user ID. The HTTP PUT request should be made to the URL `http://localhost:8080/api/user/4`, where 2 is the ID of the user to be updated.\n\n### Request Parameters\n\nThis API endpoint does not require any request parameters.\n\n### Response\n\nThe API will return a response with the following details:\n\n- Status: 201\n- Body: \"User Berhasil Diubah\"\n    \n\nPlease note that the response body may vary based on the changes made to the user."
 			},
 			"response": []
 		},
@@ -107,6 +123,142 @@
 						"api",
 						"user",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"haryoa\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "This endpoint is used to register a new user. It sends an HTTP POST request to the URL `http://localhost:8080/api/register`.\n\n### Request Parameters\n\nThis endpoint does not require any request parameters.\n\n### Response\n\nThe response received from the server will have a status code of 201, indicating that the registration was successful. The response body will contain the message \"Registration has successfully!\".\n\nPlease note that this is a custom instruction from the user to add documentation. The actual request and response parameters were not provided. If you need more specific information, please provide the request and response parameters, and I will be happy to generate a more detailed description."
+			},
+			"response": []
+		},
+		{
+			"name": "Create Role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles"
+					]
+				},
+				"description": "This API endpoint allows you to create a new role. It is an HTTP POST request that should be sent to [http://localhost:8080/api/roles](http://localhost:8080/api/roles).\n\n### Request Parameters\n\nThere are no specific request parameters mentioned for this endpoint.\n\n### Response\n\nThe response for this request is a status code and a message. The last execution of this request returned a status code of 201, indicating that the role was successfully created. The response message was \"Role Berhasil dibuat\", which means \"Role created successfully\" in Indonesian.\n\nPlease note that the response may vary depending on the specific implementation of the API."
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Roles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Roles",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"manager\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/roles/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles",
+						"4"
+					]
+				},
+				"description": "This API endpoint allows you to update a specific role by sending an HTTP PUT request to the URL `http://localhost:8080/api/roles/4`.  \nYou Need to login first before hit this api\n\n### Request Parameters\n\nThere are no specific request parameters mentioned for this endpoint.\n\n### Response\n\nThe response to this request will have a status code of 201, indicating that the update was successful. Additionally, the response body will contain the message \"Role Berhasil diubah\", confirming that the role has been successfully updated.\n\nPlease note that the specific details of the role being updated, such as the role name or any other role attributes, are not mentioned in the request or response. You may need to refer to the API documentation or contact the API provider for more information on the available role attributes and how to update them."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Roles",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/roles/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles",
+						"4"
 					]
 				}
 			},
